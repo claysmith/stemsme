@@ -1,0 +1,11 @@
+import postgres from 'postgres'
+import { drizzle } from 'drizzle-orm/postgres-js'
+import * as schema from './schema'
+import * as relations from './relations'
+
+const connectionString =
+  process.env.DATABASE_URL || 'postgres://localhost:5432/stemsme'
+
+const client = postgres(connectionString, { prepare: false })
+
+export const db = drizzle(client, { schema: { ...schema, ...relations } })

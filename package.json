@@ -1,0 +1,28 @@
+{
+  "name": "stems-me",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:seed": "npx tsx server/db/seed.ts",
+    "db:studio": "drizzle-kit studio",
+    "db:setup": "npx tsx scripts/setup-db.ts"
+  },
+  "dependencies": {
+    "drizzle-orm": "^0.45.2",
+    "nuxt": "^4.4.6",
+    "postgres": "^3.4.9",
+    "stripe": "^22.1.1",
+    "vue": "^3.5.34",
+    "vue-router": "^5.0.7"
+  },
+  "devDependencies": {
+    "drizzle-kit": "^0.31.10"
+  }
+}
