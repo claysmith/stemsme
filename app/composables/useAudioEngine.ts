@@ -17,7 +17,7 @@ interface AudioNode {
 export const useAudioEngine = () => {
   let ctx: AudioContext | null = null
   const isPlaying = ref(false)
-  const masterVolume = ref(0.75)
+  const masterVolume = ref(0.5)
   const controls = reactive<Record<string, ChannelState>>({})
   const activeSoloCount = ref(0)
 
@@ -72,7 +72,7 @@ export const useAudioEngine = () => {
       }
 
       nodes.set(def.id, node)
-      controls[def.id] = { volume: 0.7, solo: false, mute: false }
+      controls[def.id] = { volume: 0.4, solo: false, mute: false }
     }
     activeSoloCount.value = 0
   }

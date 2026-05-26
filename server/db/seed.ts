@@ -106,49 +106,49 @@ async function seed() {
     .returning({ id: tracks.id })
 
   const stemData: (typeof stems.$inferInsert)[] = [
-    // Neon Dreams
-    { trackId: trackRows[0].id, name: 'Drums', color: '#ef4444', frequency: 60, waveform: 'sawtooth', sortOrder: 0 },
-    { trackId: trackRows[0].id, name: 'Bass', color: '#f97316', frequency: 110, waveform: 'sawtooth', sortOrder: 1 },
-    { trackId: trackRows[0].id, name: 'Synth Pad', color: '#22c55e', frequency: 261.63, waveform: 'sine', sortOrder: 2 },
-    { trackId: trackRows[0].id, name: 'Arpeggio', color: '#3b82f6', frequency: 392, waveform: 'triangle', sortOrder: 3 },
-    { trackId: trackRows[0].id, name: 'Lead', color: '#a855f7', frequency: 523.25, waveform: 'sawtooth', sortOrder: 4 },
-    // Midnight Blues
-    { trackId: trackRows[1].id, name: 'Drums', color: '#ef4444', frequency: 55, waveform: 'sawtooth', sortOrder: 0 },
+    // Neon Dreams — Am chord: A C E
+    { trackId: trackRows[0].id, name: 'Drums', color: '#ef4444', frequency: 55, waveform: 'sine', sortOrder: 0 },
+    { trackId: trackRows[0].id, name: 'Bass', color: '#f97316', frequency: 110, waveform: 'sine', sortOrder: 1 },
+    { trackId: trackRows[0].id, name: 'Synth Pad', color: '#22c55e', frequency: 220, waveform: 'sine', sortOrder: 2 },
+    { trackId: trackRows[0].id, name: 'Arpeggio', color: '#3b82f6', frequency: 261.63, waveform: 'triangle', sortOrder: 3 },
+    { trackId: trackRows[0].id, name: 'Lead', color: '#a855f7', frequency: 329.63, waveform: 'sawtooth', sortOrder: 4 },
+    // Midnight Blues — E7 chord: E G# B D
+    { trackId: trackRows[1].id, name: 'Drums', color: '#ef4444', frequency: 55, waveform: 'sine', sortOrder: 0 },
     { trackId: trackRows[1].id, name: 'Bass', color: '#f97316', frequency: 82.41, waveform: 'sine', sortOrder: 1 },
     { trackId: trackRows[1].id, name: 'Rhythm Guitar', color: '#22c55e', frequency: 164.81, waveform: 'triangle', sortOrder: 2 },
-    { trackId: trackRows[1].id, name: 'Lead Guitar', color: '#14b8a6', frequency: 329.63, waveform: 'sawtooth', sortOrder: 3 },
-    { trackId: trackRows[1].id, name: 'Vocals', color: '#a855f7', frequency: 440, waveform: 'sine', sortOrder: 4 },
-    { trackId: trackRows[1].id, name: 'Piano', color: '#3b82f6', frequency: 261.63, waveform: 'triangle', sortOrder: 5 },
-    // Digital Rain
-    { trackId: trackRows[2].id, name: 'Kick', color: '#ef4444', frequency: 50, waveform: 'sawtooth', sortOrder: 0 },
-    { trackId: trackRows[2].id, name: 'Bass', color: '#f97316', frequency: 73.42, waveform: 'sawtooth', sortOrder: 1 },
-    { trackId: trackRows[2].id, name: 'Synth', color: '#22c55e', frequency: 220, waveform: 'sawtooth', sortOrder: 2 },
-    { trackId: trackRows[2].id, name: 'Percussion', color: '#3b82f6', frequency: 1000, waveform: 'triangle', sortOrder: 3 },
-    { trackId: trackRows[2].id, name: 'FX', color: '#a855f7', frequency: 800, waveform: 'sawtooth', sortOrder: 4 },
-    // Sunset Groove
-    { trackId: trackRows[3].id, name: 'Drums', color: '#ef4444', frequency: 65, waveform: 'sawtooth', sortOrder: 0 },
-    { trackId: trackRows[3].id, name: 'Bass', color: '#f97316', frequency: 98, waveform: 'sawtooth', sortOrder: 1 },
+    { trackId: trackRows[1].id, name: 'Lead Guitar', color: '#14b8a6', frequency: 207.65, waveform: 'sawtooth', sortOrder: 3 },
+    { trackId: trackRows[1].id, name: 'Vocals', color: '#a855f7', frequency: 246.94, waveform: 'sine', sortOrder: 4 },
+    { trackId: trackRows[1].id, name: 'Piano', color: '#3b82f6', frequency: 293.66, waveform: 'triangle', sortOrder: 5 },
+    // Digital Rain — Dm chord: D F A
+    { trackId: trackRows[2].id, name: 'Kick', color: '#ef4444', frequency: 55, waveform: 'sine', sortOrder: 0 },
+    { trackId: trackRows[2].id, name: 'Bass', color: '#f97316', frequency: 73.42, waveform: 'sine', sortOrder: 1 },
+    { trackId: trackRows[2].id, name: 'Synth', color: '#22c55e', frequency: 146.83, waveform: 'sawtooth', sortOrder: 2 },
+    { trackId: trackRows[2].id, name: 'Percussion', color: '#3b82f6', frequency: 174.61, waveform: 'triangle', sortOrder: 3 },
+    { trackId: trackRows[2].id, name: 'FX', color: '#a855f7', frequency: 220, waveform: 'sawtooth', sortOrder: 4 },
+    // Sunset Groove — Gm chord: G Bb D
+    { trackId: trackRows[3].id, name: 'Drums', color: '#ef4444', frequency: 55, waveform: 'sine', sortOrder: 0 },
+    { trackId: trackRows[3].id, name: 'Bass', color: '#f97316', frequency: 98, waveform: 'sine', sortOrder: 1 },
     { trackId: trackRows[3].id, name: 'Guitar', color: '#22c55e', frequency: 196, waveform: 'triangle', sortOrder: 2 },
-    { trackId: trackRows[3].id, name: 'Keys', color: '#3b82f6', frequency: 392, waveform: 'triangle', sortOrder: 3 },
-    { trackId: trackRows[3].id, name: 'Horns', color: '#a855f7', frequency: 466.16, waveform: 'sawtooth', sortOrder: 4 },
-    { trackId: trackRows[3].id, name: 'Vocals', color: '#ec4899', frequency: 587.33, waveform: 'sine', sortOrder: 5 },
-    // Acoustic Morning
-    { trackId: trackRows[4].id, name: 'Acoustic Guitar', color: '#22c55e', frequency: 261.63, waveform: 'triangle', sortOrder: 0 },
-    { trackId: trackRows[4].id, name: 'Vocals', color: '#a855f7', frequency: 392, waveform: 'sine', sortOrder: 1 },
-    { trackId: trackRows[4].id, name: 'Bass', color: '#f97316', frequency: 130.81, waveform: 'sine', sortOrder: 2 },
-    { trackId: trackRows[4].id, name: 'Percussion', color: '#ef4444', frequency: 200, waveform: 'triangle', sortOrder: 3 },
-    { trackId: trackRows[4].id, name: 'Strings', color: '#3b82f6', frequency: 523.25, waveform: 'sine', sortOrder: 4 },
-    // Urban Flow
-    { trackId: trackRows[5].id, name: 'Drums', color: '#ef4444', frequency: 55, waveform: 'sawtooth', sortOrder: 0 },
-    { trackId: trackRows[5].id, name: '808 Bass', color: '#f97316', frequency: 73.42, waveform: 'sawtooth', sortOrder: 1 },
-    { trackId: trackRows[5].id, name: 'Sample', color: '#22c55e', frequency: 261.63, waveform: 'triangle', sortOrder: 2 },
-    { trackId: trackRows[5].id, name: 'Keys', color: '#3b82f6', frequency: 329.63, waveform: 'sine', sortOrder: 3 },
-    { trackId: trackRows[5].id, name: 'Vocals', color: '#a855f7', frequency: 440, waveform: 'sawtooth', sortOrder: 4 },
-    // Cosmic Drift
-    { trackId: trackRows[6].id, name: 'Pad', color: '#22c55e', frequency: 174.61, waveform: 'sine', sortOrder: 0 },
-    { trackId: trackRows[6].id, name: 'Texture', color: '#3b82f6', frequency: 349.23, waveform: 'sine', sortOrder: 1 },
-    { trackId: trackRows[6].id, name: 'Bass Drone', color: '#f97316', frequency: 87.31, waveform: 'sine', sortOrder: 2 },
-    { trackId: trackRows[6].id, name: 'Melody', color: '#a855f7', frequency: 698.46, waveform: 'triangle', sortOrder: 3 },
+    { trackId: trackRows[3].id, name: 'Keys', color: '#3b82f6', frequency: 233.08, waveform: 'triangle', sortOrder: 3 },
+    { trackId: trackRows[3].id, name: 'Horns', color: '#a855f7', frequency: 293.66, waveform: 'sawtooth', sortOrder: 4 },
+    { trackId: trackRows[3].id, name: 'Vocals', color: '#ec4899', frequency: 392, waveform: 'sine', sortOrder: 5 },
+    // Acoustic Morning — C chord: C E G
+    { trackId: trackRows[4].id, name: 'Bass', color: '#f97316', frequency: 65.41, waveform: 'sine', sortOrder: 0 },
+    { trackId: trackRows[4].id, name: 'Acoustic Guitar', color: '#22c55e', frequency: 130.81, waveform: 'triangle', sortOrder: 1 },
+    { trackId: trackRows[4].id, name: 'Percussion', color: '#ef4444', frequency: 164.81, waveform: 'triangle', sortOrder: 2 },
+    { trackId: trackRows[4].id, name: 'Vocals', color: '#a855f7', frequency: 196, waveform: 'sine', sortOrder: 3 },
+    { trackId: trackRows[4].id, name: 'Strings', color: '#3b82f6', frequency: 261.63, waveform: 'sine', sortOrder: 4 },
+    // Urban Flow — D chord: D F# A
+    { trackId: trackRows[5].id, name: 'Drums', color: '#ef4444', frequency: 55, waveform: 'sine', sortOrder: 0 },
+    { trackId: trackRows[5].id, name: '808 Bass', color: '#f97316', frequency: 73.42, waveform: 'sine', sortOrder: 1 },
+    { trackId: trackRows[5].id, name: 'Keys', color: '#3b82f6', frequency: 146.83, waveform: 'triangle', sortOrder: 2 },
+    { trackId: trackRows[5].id, name: 'Sample', color: '#22c55e', frequency: 185, waveform: 'triangle', sortOrder: 3 },
+    { trackId: trackRows[5].id, name: 'Vocals', color: '#a855f7', frequency: 220, waveform: 'sawtooth', sortOrder: 4 },
+    // Cosmic Drift — F chord: F A C
+    { trackId: trackRows[6].id, name: 'Bass Drone', color: '#f97316', frequency: 87.31, waveform: 'sine', sortOrder: 0 },
+    { trackId: trackRows[6].id, name: 'Pad', color: '#22c55e', frequency: 174.61, waveform: 'sine', sortOrder: 1 },
+    { trackId: trackRows[6].id, name: 'Texture', color: '#3b82f6', frequency: 220, waveform: 'sine', sortOrder: 2 },
+    { trackId: trackRows[6].id, name: 'Melody', color: '#a855f7', frequency: 261.63, waveform: 'triangle', sortOrder: 3 },
   ]
 
   await db.insert(stems).values(stemData)
