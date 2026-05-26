@@ -323,7 +323,7 @@ function handleMute(stemId: string) {
 
 .fader {
   width: 28px;
-  height: 140px;
+  height: 139px;
   position: relative;
   cursor: pointer;
   display: flex;
